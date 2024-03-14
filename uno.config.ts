@@ -7,9 +7,9 @@ export default defineConfig({
   presets: [
     presetUno(),
     presetWebFonts({
-      provider: "google",
+      provider: "bunny",
       fonts: {
-        sans: "Onest",
+        sans: "Plus Jakarta Sans",
         mono: "JetBrains Mono",
       },
     }),
