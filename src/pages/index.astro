@@ -13,7 +13,13 @@ import ProjectCard from '../components/ProjectCard';
   </head>
   <body>
     <div class="font-sans text-accent">
-        <Header/>
+        <Header 
+          links={[
+            {url: "https://rowandev.bsky.social", icon: "i-simple-icons-bluesky"},
+            {url: "https://github.com/rowandevving", icon: "i-simple-icons-github"},
+            {url: "https://modrinth.com/user/rowandev", icon: "i-simple-icons-modrinth"},
+          ]}
+        />
         <div class="h-full lg:h-screen bg-primary p-15 text-xl">
           <div class="lg:w-3/4">
             <h1 class="text-5xl font-bold mb-7">
@@ -23,7 +29,7 @@ import ProjectCard from '../components/ProjectCard';
             My name is Rowan and I'm an aspiring full-stack developer interested in web design, educational technology and robotics.
             I may poke around with Minecraft modding from time to time as well.
             </p>
-            <p>
+            <p class="mt-5">
             These are some of the things I've made and done, which I hope made someone's life a little easier (or at least more fun!)
             </p>
           </div>
@@ -67,7 +73,7 @@ import ProjectCard from '../components/ProjectCard';
             />
             <ProjectCard
               name="OpenCane"
-              description="A Fabric mod adding drugs to minecraft. Why? Don't ask me."
+              description="A Fabric mod adding drugs to Minecraft. Why? Don't ask me."
               links={[
                 {url: "https://github.com/custardmc/opencane", icon: "i-simple-icons-github"},
                 {url: "https://www.modrinth.com/mod/opencane", icon: "i-simple-icons-modrinth"},
