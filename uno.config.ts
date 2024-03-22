@@ -9,7 +9,7 @@ export default defineConfig({
     presetWebFonts({
       provider: "bunny",
       fonts: {
-        sans: "Plus Jakarta Sans",
+        sans: "Figtree",
         mono: "JetBrains Mono",
       },
     }),
