@@ -28,7 +28,7 @@ export default function Header(props: any) {
             </div>
             <div class="mt-10 flex flex-col items-center">
               {props.links.map((link:any, index:number) => (
-                <a href={link.url} class="visited:text-inherit text-inherit flex flex-row text-4xl font-semibold">
+                <a href={link.url} class="visited:text-inherit text-inherit flex flex-row text-4xl font-medium">
                     <div class={link.icon + " mb-10 hover:text-dull transition-colors duration-500 lg:ml-8"} key={index}/>
                     <div class="ml-5">
                       {link.name}
