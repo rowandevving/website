@@ -13,14 +13,14 @@ import ProjectCard from '../components/ProjectCard';
   </head>
   <body>
     <div class="font-sans text-accent">
-        <Header 
+        <Header client:media="(max-width: 640px)"
           links={[
-            {url: "https://rowandev.bsky.social", icon: "i-simple-icons-bluesky"},
-            {url: "https://github.com/rowandevving", icon: "i-simple-icons-github"},
-            {url: "https://modrinth.com/user/rowandev", icon: "i-simple-icons-modrinth"},
+            {url: "https://rowandev.bsky.social", icon: "i-simple-icons-bluesky", name: "Bluesky"},
+            {url: "https://github.com/rowandevving", icon: "i-simple-icons-github", name: "GitHub"},
+            {url: "https://modrinth.com/user/rowandev", icon: "i-simple-icons-modrinth" , name: "Modrinth"},
           ]}
         />
-        <div class="h-full lg:h-screen bg-primary p-15 text-xl">
+        <div class="h-full lg:h-screen bg-primary md:p-15 p-10 text-xl ">
           <div class="lg:w-3/4">
             <h1 class="text-5xl font-bold mb-7">
             Hi!

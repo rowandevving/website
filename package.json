@@ -13,14 +13,13 @@
     "@astrojs/check": "^0.5.9",
     "@astrojs/preact": "^3.1.1",
     "@preact/signals": "^1.2.1",
-    "@types/three": "^0.162.0",
     "astro": "^4.5.4",
     "preact": "^10.19.2",
-    "three": "^0.162.0",
     "typescript": "^5.4.2"
   },
   "devDependencies": {
     "@iconify-json/simple-icons": "^1.1.95",
+    "@iconify-json/tabler": "^1.1.109",
     "@unocss/reset": "^0.58.5",
     "unocss": "^0.58.5"
   }
