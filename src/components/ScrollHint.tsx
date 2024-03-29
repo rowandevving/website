@@ -9,8 +9,8 @@ export default function ScrollHint() {
     return (
         <>
           { hinting.value && window.scrollY == 0 ? (
-            <div class="fixed bottom-0 flex flex-col items-center w-full text-accent" onScroll={() => hinting.value = false}>
-              <div class="i-tabler-chevron-down lg:text-6xl lg:opacity-100 animate-bounce text-5xl opacity-60"></div>
+            <div class="fixed bottom-0 md:flex flex-col items-center w-full text-accent hidden" onScroll={() => hinting.value = false}>
+              <div class="i-tabler-chevron-down text-6xl animate-bounce"></div>
             </div>
           ) : null }
         </>
