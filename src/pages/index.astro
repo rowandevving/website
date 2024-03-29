@@ -2,6 +2,7 @@
 import Header from '../components/Header';
 import ScrollHint from '../components/ScrollHint';
 import ProjectCard from '../components/ProjectCard';
+import People from '../components/People';
 ---
 
 <html lang="en">
@@ -11,77 +12,89 @@ import ProjectCard from '../components/ProjectCard';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>rowan</title>
   </head>
-  <body>
-    <div class="font-sans text-accent">
-        <Header client:media="(max-width: 640px)"
-          links={[
-            {url: "https://rowandev.bsky.social", icon: "i-simple-icons-bluesky", name: "Bluesky"},
-            {url: "https://github.com/rowandevving", icon: "i-simple-icons-github", name: "GitHub"},
-            {url: "https://modrinth.com/user/rowandev", icon: "i-simple-icons-modrinth" , name: "Modrinth"},
-          ]}
-        />
-        <div class="h-full lg:h-screen bg-primary md:p-15 p-10 text-xl ">
-          <div class="lg:w-3/4">
-            <h1 class="text-5xl font-bold mb-7">
-            Hi!
-            </h1>
-            <p>
-            My name is Rowan and I'm an aspiring full-stack developer interested in web design, educational technology and robotics.
-            I may poke around with Minecraft modding from time to time as well.
-            </p>
-            <p class="mt-5">
-            These are some of the things I've made and done, which I hope made someone's life a little easier (or at least more fun!)
-            </p>
-          </div>
-
-          <div class="flex flex-wrap mt-13 lg:flex-row flex-col">
-            <ProjectCard
-              name="Biome Name Fix"
-              description="Create lang files to fix ugly looking client-side biome names when playing with Minecraft worldgen datapacks."
-              links={[
-                {url: "https://github.com/rowandevving/biomenamefix", icon: "i-simple-icons-github"},
-                {url: "https://biomenamefix.streamlit.app", icon: "i-simple-icons-streamlit"}
-              ]}
-            />
-            <ProjectCard
-              name="Scape"
-              description="A work-in progress open-source alternative to Bing Wallpapers with the same images you love, written in Go."
-              links={[
-                {url: "https://github.com/rowandevving/scape", icon: "i-simple-icons-github"},
-              ]}
-            />
-            <ProjectCard
-              name="This site!"
-              description="Powered by Preact, Astro and UnoCSS. Definitely not just my own little CSS playground!"
-              links={[
-                {url: "https://github.com/rowandevving/rowan.pages.dev", icon: "i-simple-icons-github"},
-              ]}
-            />
-            <ProjectCard
-              name="BlueRinth"
-              description="A browser extension that allows you to change Modrinth's accent colour. Made in collaboration with WorldWidePixel."
-              links={[
-                {url: "https://github.com/worldwidepixel/bluerinth", icon: "i-simple-icons-github"},
-                {url: "https://chromewebstore.google.com/detail/bluerinth/pfmfgcpffkhjigcklilchkoecmefkela", icon: "i-simple-icons-googlechrome"},
-                {url: "https://addons.mozilla.org/firefox/addon/bluerinth/", icon: "i-simple-icons-firefoxbrowser"},
-              ]}
-            />
-            <ProjectCard
-              name="Marquee"
-              description="A (currently conceptual) platform for creating, using and sharing flashcard packs, for students. Watch this space!"
-              links={[]}
-            />
-            <ProjectCard
-              name="OpenCane"
-              description="A Fabric mod adding drugs to Minecraft. Why? Don't ask me."
-              links={[
-                {url: "https://github.com/custardmc/opencane", icon: "i-simple-icons-github"},
-                {url: "https://www.modrinth.com/mod/opencane", icon: "i-simple-icons-modrinth"},
-              ]}
-            />
-          </div>
+  <body class="font-sans text-accent">
+      <Header client:media="(max-width: 640px)"
+        links={[
+          {url: "https://rowandev.bsky.social", icon: "i-simple-icons-bluesky", name: "Bluesky"},
+          {url: "https://github.com/rowandevving", icon: "i-simple-icons-github", name: "GitHub"},
+          {url: "https://modrinth.com/user/rowandev", icon: "i-simple-icons-modrinth" , name: "Modrinth"},
+        ]}
+      />
+      <div class="h-full bg-primary md:p-15 p-10 text-xl ">
+        <div class="lg:w-3/4">
+          <h1 class="text-5xl font-bold mb-7">
+          Hi!
+          </h1>
+          <p>
+          My name is Rowan and I'm an aspiring full-stack developer interested in web design, educational technology and robotics.
+          I may poke around with Minecraft modding from time to time as well.
+          </p>
+          <p class="mt-5">
+          These are some of the things I've made and done, which I hope made someone's life a little easier (or at least more fun!)
+          </p>
         </div>
+
+        <div class="flex flex-wrap mt-13 lg:flex-row flex-col">
+          <ProjectCard
+            name="Biome Name Fix"
+            description="Create lang files to fix ugly looking client-side biome names when playing with Minecraft worldgen datapacks."
+            links={[
+              {url: "https://github.com/rowandevving/biomenamefix", icon: "i-simple-icons-github"},
+              {url: "https://biomenamefix.streamlit.app", icon: "i-simple-icons-streamlit"}
+            ]}
+          />
+          <ProjectCard
+            name="Scape"
+            description="A work-in progress open-source alternative to Bing Wallpapers with the same images you love, written in Go."
+            links={[
+              {url: "https://github.com/rowandevving/scape", icon: "i-simple-icons-github"},
+            ]}
+          />
+          <ProjectCard
+            name="This site!"
+            description="Powered by Preact, Astro and UnoCSS. Definitely not just my own little CSS playground!"
+            links={[
+              {url: "https://github.com/rowandevving/rowan.pages.dev", icon: "i-simple-icons-github"},
+            ]}
+          />
+          <ProjectCard
+            name="BlueRinth"
+            description="A browser extension that allows you to change Modrinth's accent colour. Made in collaboration with WorldWidePixel."
+            links={[
+              {url: "https://github.com/worldwidepixel/bluerinth", icon: "i-simple-icons-github"},
+              {url: "https://chromewebstore.google.com/detail/bluerinth/pfmfgcpffkhjigcklilchkoecmefkela", icon: "i-simple-icons-googlechrome"},
+              {url: "https://addons.mozilla.org/firefox/addon/bluerinth/", icon: "i-simple-icons-firefoxbrowser"},
+            ]}
+          />
+          <ProjectCard
+            name="Marquee"
+            description="A (currently conceptual) platform for creating, using and sharing flashcard packs, for students. Watch this space!"
+            links={[]}
+          />
+          <ProjectCard
+            name="OpenCane"
+            description="A Fabric mod adding drugs to Minecraft. Why? Don't ask me."
+            links={[
+              {url: "https://github.com/custardmc/opencane", icon: "i-simple-icons-github"},
+              {url: "https://www.modrinth.com/mod/opencane", icon: "i-simple-icons-modrinth"},
+            ]}
+          />
+        </div>
+        <h1 class="text-4xl font-bold mb-7 mt-17">
+          Cool people
+        </h1>
+        <People people={[
+          {image: "https://avatars.githubusercontent.com/u/124838505?v=4", link: "https://blurryface.xyz"}, //blurry
+          {image: "https://avatars.githubusercontent.com/u/63272345?v=4", link: "https://github.com/catter1"}, //catter
+          {image: "https://avatars.githubusercontent.com/u/58098422?v=4", link: "https://worldwidepixel.ca"}, // pixel
+          {image: "https://codeberg.org/avatars/62cbdd8dccd084d4ceeda0f2e59540fd534c2daaa87458c70dab3cf8a7ac9600" , link: "https://naomieow.xyz"}, //naomi
+          {image: "https://avatars.githubusercontent.com/u/42325132?v=4", link: "https://intergrav.xyz"}, //devin
+          {image: "https://pbs.twimg.com/profile_images/1773052959758127104/h8fJ5V12_400x400.jpg", link: "https://linktr.ee/sarcasmtree"}, //sarc
+          {image: "https://cdn.discordapp.com/avatars/234748321258799104/a_51113dd1a5a47930aba2be06ef6f9b6d?size=1024", link: "https://twitter.com/terabuildsstuff"}, //tera
+          {image: "https://pbs.twimg.com/profile_images/1608486289325658117/_6UyttK8.jpg", link: "https://twitter.com/asplatus"}, //splatus
+        ]}>
       </div>
-      <ScrollHint client:only="preact"/>
+    </div>
+    <ScrollHint client:only="preact"/>
   </body>
 </html>
