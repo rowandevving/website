@@ -1,18 +1,18 @@
 import { signal } from "@preact/signals";
 
-const hinting = signal(true);
+const opacity = signal({opacity: 100});
 
-window.addEventListener('scroll', () => hinting.value = false);
+if (window.scrollY != 0) { opacity.value = {opacity: 0}; }
+
+window.addEventListener('scroll', () => opacity.value = {opacity: 0});
 
 export default function ScrollHint() {
 
     return (
-        <>
-          { hinting.value && window.scrollY == 0 ? (
-            <div class="fixed bottom-0 md:flex flex-col items-center w-full text-accent hidden" onScroll={() => hinting.value = false}>
-              <div class="i-tabler-chevron-down text-6xl animate-bounce"></div>
-            </div>
-          ) : null }
-        </>
+      <>
+        <div class="fixed bottom-0 md:flex flex-col items-center w-full text-accent hidden transition-opacity duration-200" style={opacity.value}>
+          <div class="i-tabler-chevron-down text-6xl animate-bounce"></div>
+        </div>
+      </>
     );
 }
