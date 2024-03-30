@@ -2,21 +2,24 @@ import { signal } from "@preact/signals";
 
 const navToggle = signal(false);
 const pos = signal({left: "-100%"});
-const timeout = signal(false)
+var timeout = false
 
 const toggleNav = async () => {
-  if (navToggle.value) {
-    pos.value = {left: "-100%"};
-    await new Promise(resolve => setTimeout(resolve, 500));
-    navToggle.value = !navToggle.value
-  } else {
-    navToggle.value = !navToggle.value
-    await new Promise(resolve => setTimeout(resolve, 1));
-    pos.value = {left: "0"};
-  }
-  timeout.value = true
+  if (!timeout) {
+    if (navToggle.value) {
+      pos.value = {left: "-100%"};
+      await new Promise(resolve => setTimeout(resolve, 500));
+      navToggle.value = !navToggle.value
+    } else {
+      navToggle.value = !navToggle.value
+      await new Promise(resolve => setTimeout(resolve, 1));
+      pos.value = {left: "0"};
+    }
+  timeout = true
   await new Promise(resolve => setTimeout(resolve, 300));
-  timeout.value = false
+  timeout = false
+
+  }
 }
 
 export default function Header(props: any) {
@@ -34,12 +37,12 @@ export default function Header(props: any) {
               </a>
             ))}
             </div>
-            <div class="ml-auto mr-3 md:hidden block text-4xl scale-115 i-tabler-menu active:scale-100 transition-transform duration-300" onClick={() => {if(!timeout.value){toggleNav()}}}/>
+            <div class="ml-auto mr-3 md:hidden block text-4xl scale-115 i-tabler-menu active:scale-100 transition-transform duration-300" onClick={toggleNav}/>
           </div>
         { navToggle.value ? (
           <div class="h-screen w-full bg-base_bright fixed top-0 left-0 z-1 p-10 text-accent transition-all duration-700 linear" style={pos.value}>
             <div class="flex flex-row items-center h-30 mt--10">
-              <div class="ml-auto i-tabler-x text-4xl mr-3 scale-115 active:scale-100 transition-transform duration-300" onClick={() => {if(!timeout.value){toggleNav()}}}/>
+              <div class="ml-auto i-tabler-x text-4xl mr-3 scale-115 active:scale-100 transition-transform duration-300" onClick={toggleNav}/>
             </div>
             <div class="mt-10 flex flex-col items-center">
               {props.links.map((link:any, index:number) => (
