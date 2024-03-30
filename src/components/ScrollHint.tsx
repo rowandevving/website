@@ -10,7 +10,7 @@ export default function ScrollHint() {
 
     return (
       <>
-        <div class="fixed bottom-0 md:flex flex-col items-center w-full text-accent hidden transition-opacity duration-200" style={opacity.value}>
+        <div class="fixed bottom-0 md:flex flex-col items-center w-full text-accent hidden transition-opacity duration-200 pointer-events-none" style={opacity.value}>
           <div class="i-tabler-chevron-down text-6xl animate-bounce"></div>
         </div>
       </>
