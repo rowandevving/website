@@ -32,7 +32,7 @@ export default function Header(props: any) {
             </h1>
             <div class="ml-auto mr-3 lg:mr-0 flex-row hidden md:flex scale-115 lg:scale-100">
             {props.links.map((link:any, index:number) => (
-              <a href={link.url} class="visited:text-inherit text-inherit">
+              <a href={link.url} class="visited:text-inherit text-inherit" aria-label={link.name}>
                   <div class={link.icon + " text-4xl hover:text-dull transition-colors duration-500 lg:ml-8 ml-6"} key={index}/>
               </a>
             ))}
@@ -46,12 +46,12 @@ export default function Header(props: any) {
             </div>
             <div class="mt-10 flex flex-col items-center">
               {props.links.map((link:any, index:number) => (
-                <a href={link.url} class="visited:text-inherit text-inherit flex flex-row text-4xl font-medium">
-                    <div class={link.icon + " mb-10 hover:text-dull transition-colors duration-500 lg:ml-8"} key={index}/>
-                    <div class="ml-5">
-                      {link.name}
-                    </div>
-                    <div class="ml-1 i-tabler-arrow-up-right text-3xl relative top-1.5"/>
+                <a href={link.url} class="visited:text-inherit text-inherit flex flex-row text-4xl font-medium" aria-label={link.name}>
+                  <div class={link.icon + " mb-10 hover:text-dull transition-colors duration-500 lg:ml-8"} key={index}/>
+                  <div class="ml-5">
+                    {link.name}
+                  </div>
+                  <div class="ml-1 i-tabler-arrow-up-right text-3xl relative top-1.5"/>
                 </a>
               ))}
             </div>

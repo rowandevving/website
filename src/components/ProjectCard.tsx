@@ -1,5 +1,12 @@
 export default function ProjectCard(props: any) {
 
+  const getLabel = (icon:string) => {
+    const segment = icon.split("-");
+    const label = segment[segment.length - 1];
+  
+    return label;
+  }
+
     return (
       <>
         <div class="bg-secondary p-5 w-full hover:scale-103 rounded-xl lg:w-1/4 transition-transform duration-500 ease-out mr-10 mb-10 flex flex-col">
@@ -9,7 +16,7 @@ export default function ProjectCard(props: any) {
           </p>
           <div class="m-0 flex items-center mt-auto">
           {props.links.map((link:any, index:number) => (
-            <a href={link.url} class="visited:text-inherit text-inherit">
+            <a href={link.url} class="visited:text-inherit text-inherit" aria-label={getLabel(link.icon)}>
               <div class={link.icon + " text-3xl hover:text-dull transition-colors duration-500 mr-3"} key={index}/>
             </a>
           ))}

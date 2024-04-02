@@ -1,5 +1,12 @@
 export default function Footer() {
 
+  const getLabel = (icon:string) => {
+    const segment = icon.split("-");
+    const label = segment[segment.length - 1];
+  
+    return label;
+  }
+
   return (
     <>
       <div class="lg:h-20 h-30 bg-base flex items-center p-10 w-full w-1/2 lg:text-lg text-xl text-dull flex-row">
@@ -14,9 +21,9 @@ export default function Footer() {
         <div class="ml-auto md:flex flex-row hidden">
           Powered by
           <div class="text-xl flex flex-row items-center">
-            <a href="https://astro.build" class="i-simple-icons-astro ml-3 hover:text-accent transition-colors duration-500"/>
-            <a href="https://preactjs.com" class="i-simple-icons-preact ml-3 hover:text-accent transition-colors duration-500"/>
-            <a href="https://unocss.dev" class="i-simple-icons-unocss ml-3 hover:text-accent transition-colors duration-500"/>
+            <a href="https://astro.build" class="i-simple-icons-astro ml-3 hover:text-accent transition-colors duration-500" aria-label="astro"/>
+            <a href="https://preactjs.com" class="i-simple-icons-preact ml-3 hover:text-accent transition-colors duration-500" aria-label="preact"/>
+            <a href="https://unocss.dev" class="i-simple-icons-unocss ml-3 hover:text-accent transition-colors duration-500" aria-label="unocss"/>
           </div>
         </div>
       </div>
