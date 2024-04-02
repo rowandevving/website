@@ -1,12 +1,5 @@
 export default function Footer() {
 
-  const getLabel = (icon:string) => {
-    const segment = icon.split("-");
-    const label = segment[segment.length - 1];
-  
-    return label;
-  }
-
   return (
     <>
       <div class="lg:h-20 h-30 bg-base flex items-center p-10 w-full w-1/2 lg:text-lg text-xl text-dull flex-row">
