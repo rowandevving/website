@@ -2,7 +2,7 @@ export default function Footer() {
 
   return (
     <>
-      <div class="lg:h-20 h-30 bg-base flex items-center text-accent p-10 w-full w-1/2 lg:text-lg text-xl text-dull flex-row">
+      <div class="lg:h-20 h-30 bg-base flex items-center p-10 w-full w-1/2 lg:text-lg text-xl text-dull flex-row">
         <span class="md:block hidden">© {new Date().getFullYear()}</span>
         <span class="text-accent md:block hidden">&nbsp; Made with 💖 by rowan &nbsp;</span>
         <span class="md:block hidden"> · &nbsp;</span>   
