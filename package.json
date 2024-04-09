@@ -21,6 +21,7 @@
   "devDependencies": {
     "@iconify-json/simple-icons": "^1.1.95",
     "@iconify-json/tabler": "^1.1.109",
+    "@types/node": "^20.12.6",
     "@unocss/reset": "^0.58.5",
     "unocss": "^0.58.5"
   }
