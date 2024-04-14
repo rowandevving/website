@@ -1,26 +1,15 @@
-import { signal } from "@preact/signals";
-
 export default function Footer() {
-
-  const emoji = signal('💖')
-
-  const roll = Math.floor(Math.random() * 100)
-  if (roll < 20) {
-    emoji.value = '🏳️‍🌈'
-  } else if (roll < 25) {
-    emoji.value = '🐸'
-  }
 
   return (
     <>
       <div class="lg:h-20 h-30 bg-base flex items-center p-10 w-full w-1/2 lg:text-lg text-xl text-dull flex-row">
         <span class="md:block hidden">© {new Date().getFullYear()}</span>
-        <span class="text-accent md:block hidden">&nbsp; Made with {emoji.value} by rowan &nbsp;</span>
+        <span class="text-accent md:block hidden">&nbsp; Made with 💖 by rowan &nbsp;</span>
         <span class="md:block hidden"> · &nbsp;</span>   
         <a href="https://github.com/rowandevving/rowan.pages.dev" class="decoration-underline md:block hidden">Source</a>
         <div class="md:hidden flex flex-col">
           <p>© {new Date().getFullYear()}</p>
-          <p class="text-accent">Made with {emoji.value} by rowan</p>
+          <p class="text-accent">Made with 💖 by rowan</p>
         </div>
         <div class="ml-auto md:flex flex-row hidden">
           Powered by
