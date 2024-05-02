@@ -9,7 +9,7 @@ export default function ProjectCard(props: any) {
 
     return (
       <>
-        <div class="bg-secondary p-5 w-full hover:scale-103 rounded-xl lg:w-1/4 transition-transform duration-500 ease-out mr-10 mb-10 flex flex-col">
+        <div class="bg-secondary p-5 w-full hover:translate-y--2 rounded-xl lg:w-1/4 transition duration-500 ease-out mr-10 mb-10 flex flex-col hover:shadow-2xl">
           <h1 class="text-3xl font-bold m-0 md:w-full">{props.name}</h1>
           <p class="text-dull mt-2 mb-3">
             {props.description}
