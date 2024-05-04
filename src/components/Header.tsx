@@ -2,7 +2,7 @@ import { signal } from "@preact/signals";
 
 const navToggle = signal(false);
 const pos = signal({left: "-100%"});
-var timeout = false
+let timeout = false
 
 const toggleNav = async () => {
   if (!timeout) {
