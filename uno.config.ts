@@ -10,7 +10,12 @@ export default defineConfig({
       provider: "bunny",
       fonts: {
         sans: "Figtree",
-        mono: "JetBrains Mono",
+        mono: [
+          {
+            name: "Figtree",
+            weights: ["400", "600"],
+          }
+        ]
       },
     }),
     presetIcons(),
