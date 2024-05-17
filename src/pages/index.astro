@@ -40,7 +40,7 @@ import People from '../components/People';
         </div>
 
         <div class="flex flex-wrap mt-13 lg:flex-row flex-col">
-          <ProjectCard
+          <ProjectCard client:media="(min-width: 1024px)"
             name="Biome Name Fix"
             description="Create lang files to fix ugly looking client-side biome names when playing with Minecraft worldgen datapacks."
             links={[
@@ -48,21 +48,21 @@ import People from '../components/People';
               {url: "https://biomenamefix.streamlit.app", icon: "i-simple-icons-streamlit"}
             ]}
           />
-          <ProjectCard
+          <ProjectCard client:media="(min-width: 1024px)"
             name="Backdrop"
             description="A work-in progress open-source alternative to Bing Wallpapers with the same images you love."
             links={[
               {url: "https://github.com/rowandevving/backdrop", icon: "i-simple-icons-github"},
             ]}
           />
-          <ProjectCard
+          <ProjectCard client:media="(min-width: 1024px)"
             name="This site!"
             description="Powered by Preact, Astro and UnoCSS. Definitely not just my own little CSS playground!"
             links={[
               {url: "https://github.com/rowandevving/rowan.pages.dev", icon: "i-simple-icons-github"},
             ]}
           />
-          <ProjectCard
+          <ProjectCard client:media="(min-width: 1024px)"
             name="BlueRinth"
             description="A browser extension that allows you to change Modrinth's accent colour. Made in collaboration with WorldWidePixel."
             links={[
@@ -71,7 +71,7 @@ import People from '../components/People';
               {url: "https://addons.mozilla.org/firefox/addon/bluerinth/", icon: "i-simple-icons-firefoxbrowser"},
             ]}
           />
-          <ProjectCard
+          <ProjectCard client:media="(min-width: 1024px)"
             name="Marquee"
             description="A (currently conceptual) platform for creating, using and sharing flashcard packs, for students. Watch this space!"
             links={[]}
