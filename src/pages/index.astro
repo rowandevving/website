@@ -1,98 +1,76 @@
 ---
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Container from '../Container.astro';
 import ScrollHint from '../components/ScrollHint';
 import ProjectCard from '../components/ProjectCard';
 import People from '../components/People';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8"/>
-    <meta name="description" content="
-      My name is Rowan and I'm an aspiring full-stack developer interested in web design, educational technology and robotics.
-      I may poke around with Minecraft modding from time to time as well. Find my projects here!
-    " />
-    <link rel="icon" type="image" href="/icon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>rowan</title>
-  </head>
-  <body class="font-sans text-accent">
-      <Header client:media="(max-width: 640px)"
+<Container>
+  <div class="h-full bg-primary md:p-15 p-10 text-xl ">
+    <div class="lg:w-3/4">
+      <h1 class="text-5xl font-bold mb-7">
+        Hi!
+      </h1>
+      <p>
+        My name is Rowan and I'm an aspiring full-stack developer interested in web design, educational technology and robotics.
+        I may poke around with Minecraft modding from time to time as well.
+      </p>
+      <p class="mt-5">
+        These are some of the things I've made and done, which I hope made someone's life a little easier (or at least more fun!)
+      </p>
+    </div>
+
+    <div class="flex flex-wrap mt-13 lg:flex-row flex-col">
+      <ProjectCard client:media="(min-width: 1024px)"
+        name="Biome Name Fix"
+        description="Create lang files to fix ugly looking client-side biome names when playing with Minecraft worldgen datapacks."
         links={[
-          {url: "https://rowandev.bsky.social", icon: "i-simple-icons-bluesky", name: "Bluesky"},
-          {url: "https://github.com/rowandevving", icon: "i-simple-icons-github", name: "GitHub"},
-          {url: "https://modrinth.com/user/rowandev", icon: "i-simple-icons-modrinth" , name: "Modrinth"},
+          {url: "https://github.com/rowandevving/biomenamefix", icon: "i-simple-icons-github"},
+          {url: "https://biomenamefix.streamlit.app", icon: "i-simple-icons-streamlit"}
         ]}
       />
-      <div class="h-full bg-primary md:p-15 p-10 text-xl ">
-        <div class="lg:w-3/4">
-          <h1 class="text-5xl font-bold mb-7">
-          Hi!
-          </h1>
-          <p>
-          My name is Rowan and I'm an aspiring full-stack developer interested in web design, educational technology and robotics.
-          I may poke around with Minecraft modding from time to time as well.
-          </p>
-          <p class="mt-5">
-          These are some of the things I've made and done, which I hope made someone's life a little easier (or at least more fun!)
-          </p>
-        </div>
-
-        <div class="flex flex-wrap mt-13 lg:flex-row flex-col">
-          <ProjectCard client:media="(min-width: 1024px)"
-            name="Biome Name Fix"
-            description="Create lang files to fix ugly looking client-side biome names when playing with Minecraft worldgen datapacks."
-            links={[
-              {url: "https://github.com/rowandevving/biomenamefix", icon: "i-simple-icons-github"},
-              {url: "https://biomenamefix.streamlit.app", icon: "i-simple-icons-streamlit"}
-            ]}
-          />
-          <ProjectCard client:media="(min-width: 1024px)"
-            name="Backdrop"
-            description="A work-in progress open-source alternative to Bing Wallpapers with the same images you love."
-            links={[
-              {url: "https://github.com/rowandevving/backdrop", icon: "i-simple-icons-github"},
-            ]}
-          />
-          <ProjectCard client:media="(min-width: 1024px)"
-            name="This site!"
-            description="Powered by Preact, Astro and UnoCSS. Definitely not just my own little CSS playground!"
-            links={[
-              {url: "https://github.com/rowandevving/rowan.pages.dev", icon: "i-simple-icons-github"},
-            ]}
-          />
-          <ProjectCard client:media="(min-width: 1024px)"
-            name="BlueRinth"
-            description="A browser extension that allows you to change Modrinth's accent colour. Made in collaboration with WorldWidePixel."
-            links={[
-              {url: "https://github.com/worldwidepixel/bluerinth", icon: "i-simple-icons-github"},
-              {url: "https://chromewebstore.google.com/detail/bluerinth/pfmfgcpffkhjigcklilchkoecmefkela", icon: "i-simple-icons-googlechrome"},
-              {url: "https://addons.mozilla.org/firefox/addon/bluerinth/", icon: "i-simple-icons-firefoxbrowser"},
-            ]}
-          />
-          <ProjectCard client:media="(min-width: 1024px)"
-            name="Marquee"
-            description="A (currently conceptual) platform for creating, using and sharing flashcard packs, for students. Watch this space!"
-            links={[]}
-          />
-        </div>
-        <h1 class="text-4xl font-bold mb-7 mt-17">
-          Cool people
-        </h1>
-        <People people={[
-          {image: "/people/blurry.webp", link: "https://blurryface.xyz", name: "Blurryface"},
-          {image: "/people/catter.webp", link: "https://github.com/catter1", name: "Catter"},
-          {image: "/people/pixel.webp", link: "https://worldwidepixel.ca", name: "WorldWidePixel"},
-          {image: "/people/naomi.webp" , link: "https://naomieow.xyz", name: "Naomi"},
-          {image: "/people/devin.webp", link: "https://intergrav.xyz", name: "Devin"},
-          {image: "/people/sarc.webp", link: "https://linktr.ee/sarcasmtree", name: "SarcasmTree"},
-          {image: "/people/tera.webp", link: "https://twitter.com/terabuildsstuff", name: "Tera"},
-          {image: "/people/splatus.webp", link: "https://twitter.com/asplatus", name: "Splatus"},
-        ]}>
-      </div>
+      <ProjectCard client:media="(min-width: 1024px)"
+        name="Backdrop"
+        description="A work-in progress open-source alternative to Bing Wallpapers with the same images you love."
+        links={[
+          {url: "https://github.com/rowandevving/backdrop", icon: "i-simple-icons-github"},
+        ]}
+      />
+      <ProjectCard client:media="(min-width: 1024px)"
+        name="This site!"
+        description="Powered by Preact, Astro and UnoCSS. Definitely not just my own little CSS playground!"
+        links={[
+          {url: "https://github.com/rowandevving/rowan.pages.dev", icon: "i-simple-icons-github"},
+        ]}
+      />
+      <ProjectCard client:media="(min-width: 1024px)"
+        name="BlueRinth"
+        description="A browser extension that allows you to change Modrinth's accent colour. Made in collaboration with WorldWidePixel."
+        links={[
+          {url: "https://github.com/worldwidepixel/bluerinth", icon: "i-simple-icons-github"},
+          {url: "https://chromewebstore.google.com/detail/bluerinth/pfmfgcpffkhjigcklilchkoecmefkela", icon: "i-simple-icons-googlechrome"},
+          {url: "https://addons.mozilla.org/firefox/addon/bluerinth/", icon: "i-simple-icons-firefoxbrowser"},
+        ]}
+      />
+      <ProjectCard client:media="(min-width: 1024px)"
+        name="Marquee"
+        description="A (currently conceptual) platform for creating, using and sharing flashcard packs, for students. Watch this space!"
+        links={[]}
+      />
     </div>
-    <ScrollHint client:only="preact"/>
-    <Footer/>
-  </body>
-</html>
+    <h1 class="text-4xl font-bold mb-7 mt-17">
+      Cool people
+    </h1>
+    <People people={[
+      {image: "/people/blurry.webp", link: "https://blurryface.xyz", name: "Blurryface"},
+      {image: "/people/catter.webp", link: "https://github.com/catter1", name: "Catter"},
+      {image: "/people/pixel.webp", link: "https://worldwidepixel.ca", name: "WorldWidePixel"},
+      {image: "/people/naomi.webp" , link: "https://naomieow.xyz", name: "Naomi"},
+      {image: "/people/devin.webp", link: "https://intergrav.xyz", name: "Devin"},
+      {image: "/people/sarc.webp", link: "https://linktr.ee/sarcasmtree", name: "SarcasmTree"},
+      {image: "/people/tera.webp", link: "https://twitter.com/terabuildsstuff", name: "Tera"},
+      {image: "/people/splatus.webp", link: "https://twitter.com/asplatus", name: "Splatus"},
+    ]}>
+  </div>
+  <ScrollHint client:only="preact"/>
+</Container>
