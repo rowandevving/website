@@ -2,9 +2,12 @@ import { signal } from "@preact/signals";
 
 const opacity = signal({opacity: 100});
 
-if (window.scrollY != 0) { opacity.value = {opacity: 0}; }
+if (window.scrollY != 0 || localStorage.getItem("scrolled")) { opacity.value = {opacity: 0}; }
 
-window.addEventListener('scroll', () => opacity.value = {opacity: 0});
+window.addEventListener('scroll', () => {
+  opacity.value = {opacity: 0};
+  localStorage.setItem("scrolled", "true");
+});
 
 export default function ScrollHint() {
 
