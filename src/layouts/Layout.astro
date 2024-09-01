@@ -1,0 +1,35 @@
+---
+const { title } = Astro.props
+---
+<html lang="en" class="dark">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{title} ~ rowan</title>
+    <link rel="icon" href="/icon.png">
+  </head>
+
+  <body class="bg-light_base dark:bg-dark_base position-relative font-sans text-light_text dark:text-dark_text">
+    <div class="h-screen flex">
+      <div class="h-screen w-100 bg-light_0 dark:bg-dark_0 wavy">
+        <div class="h-full w-70% bg-light_1 dark:bg-dark_1 wavy">
+          <div class="h-full w-50% bg-light_2 dark:bg-dark_2 wavy"></div>
+        </div>
+      </div>
+      <div class="w-1/2 h-full p-15 pt-0">
+        <slot/>
+      </div>
+    </div>
+  </body>
+  <style>
+    .wavy {
+      --mask:
+    radial-gradient(46.86px at calc(100% - 66px) 50%,#000 99%,#0000 101%) 0 calc(50% - 60px)/100% 120px,
+    radial-gradient(46.86px at calc(100% + 36px) 50%,#0000 99%,#000 101%) calc(100% - 30px) 50%/100% 120px repeat-y;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+    }
+    
+  </style>
+</html>
