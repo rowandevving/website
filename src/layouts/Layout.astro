@@ -1,5 +1,6 @@
 ---
 import Nav from '../components/Nav.astro';
+import ThemeSwitcher from '../components/ThemeSwitcher.astro';
 
 const { title } = Astro.props
 
@@ -18,15 +19,22 @@ const icons = {
 
   <body class="bg-light_base dark:bg-dark_base position-relative font-sans text-light_text dark:text-dark_text">
     <div class="h-screen flex">
-      <div class="h-screen w-100 bg-light_0 dark:bg-dark_0 wavy">
+      <div class="h-screen w-120 bg-light_0 dark:bg-dark_0 wavy">
         <div class="h-full w-70% bg-light_1 dark:bg-dark_1 wavy">
           <div class="h-full w-50% bg-light_2 dark:bg-dark_2 wavy"></div>
         </div>
       </div>
-      <div class="w-1/2 h-full p-15">
-        <Nav icons={icons}/>
-        <div class="pt-15">
-          <slot/>
+      <div class="p-15">
+        <div class="flex items-center">
+          <Nav icons={icons}/>
+          <div class="ml-auto">
+            <ThemeSwitcher/>
+          </div>
+        </div>
+        <div class="w-1/2 h-full">
+          <div class="pt-15">
+            <slot/>
+          </div>
         </div>
       </div>
     </div>
