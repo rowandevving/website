@@ -1,0 +1,35 @@
+---
+const { icons } = Astro.props;
+
+const pages = import.meta.glob("/src/pages/*.astro");
+
+const links = Object.keys(pages)
+  .map((path) => {
+    const url = path
+      .replace("/src/pages", "")
+      .replace(/\/index\.astro$/, "/")
+      .replace(/\.astro$/, "")
+
+    const display = url === "/" ? "Home" : url.split("/").filter(Boolean).map((part) => part.charAt(0).toUpperCase() + part.slice(1)).join(' ');
+    const icon = icons[display.toLowerCase()] || "";
+    return { url, display, icon };
+  })
+
+  const home = links.find(link => link.url === "/");
+  const others = links.filter(link => link.url !== "/");
+
+  const orderedLinks = [home, ...others].filter(link => link !== undefined);
+
+const current = Astro.url.pathname
+---
+
+<nav>
+  <ul class="flex flex-row gap-7 tracking-tight">
+    {orderedLinks.map(({url, display, icon}) => (
+      <li class="text-lg text-light_text dark:text-dark_text flex gap-2 items-center hover:text-light_pink hover:dark:text-dark_pink transition-color">
+        <div class={`${icon} text-light_pink dark:text-dark_pink`} />
+        <a href={url === current ? "#" : url}>{display}</a>
+      </li>
+    ))}
+  </ul>
+</nav>

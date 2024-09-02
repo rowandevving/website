@@ -9,13 +9,13 @@ export default defineConfig({
     presetWebFonts({
       provider: "bunny",
       fonts: {
-        sans: "Figtree",
-        mono: [
+        sans: [
           {
             name: "Figtree",
-            weights: ["400", "600"],
+            weights: ["400", "700"],
           }
-        ]
+        ],
+        serif: "Young Serif",
       },
     }),
     presetIcons(),

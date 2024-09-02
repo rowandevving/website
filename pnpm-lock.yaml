@@ -8,6 +8,9 @@ dependencies:
   '@astrojs/check':
     specifier: ^0.5.9
     version: 0.5.9(typescript@5.4.2)
+  '@iconify-json/lucide':
+    specifier: ^1.2.1
+    version: 1.2.1
   astro:
     specifier: ^4.5.4
     version: 4.5.4(@types/node@20.12.6)(typescript@5.4.2)
@@ -22,9 +25,6 @@ devDependencies:
   '@iconify-json/simple-icons':
     specifier: ^1.1.95
     version: 1.1.95
-  '@iconify-json/tabler':
-    specifier: ^1.1.109
-    version: 1.1.109
   '@types/node':
     specifier: ^20.12.6
     version: 20.12.6
@@ -662,21 +662,20 @@ packages:
     requiresBuild: true
     optional: true
 
+  /@iconify-json/lucide@1.2.1:
+    resolution: {integrity: sha512-papXuksFsPmrfQTfUKH09N9XX2dsKSp5cdMYolV2hqP/JLL5yzsBGmn1P4eCqB1FwU+oTyh44zFS410yP530fQ==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
   /@iconify-json/simple-icons@1.1.95:
     resolution: {integrity: sha512-rNrqaG7PVrR0CsawtTb44xXiUhh3REBmYo5WbUMchtZQUMfJfGAszFMnAkFNs2GLVO2H/VTimA98hOtJfKWSig==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
 
-  /@iconify-json/tabler@1.1.109:
-    resolution: {integrity: sha512-74RaBQZQ0761iFTrgmuSH1fovfx0fBKn+txRbRNbRzfh8XWtlAHqKUc3CzvzATMLnVsSRJDxjG3qY4oWH/+opw==}
-    dependencies:
-      '@iconify/types': 2.0.0
-    dev: true
-
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
-    dev: true
 
   /@iconify/utils@2.1.22:
     resolution: {integrity: sha512-6UHVzTVXmvO8uS6xFF+L/QTSpTzA/JZxtgU+KYGFyDYMEObZ1bu/b5l+zNJjHy+0leWjHI+C0pXlzGvv3oXZMA==}
