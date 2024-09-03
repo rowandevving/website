@@ -18,21 +18,19 @@ const icons = {
   </head>
 
   <body class="bg-light_base dark:bg-dark_base position-relative font-sans text-light_text dark:text-dark_text">
-    <div class="h-screen flex">
-      <div class="h-screen w-120 bg-light_0 dark:bg-dark_0 wavy">
-        <div class="h-full w-70% bg-light_1 dark:bg-dark_1 wavy">
+    <div class="h-auto m-0 flex">
+      <div class="h-screen top-0 left-0 position-fixed w-md bg-light_0 dark:bg-dark_0 wavy">
+        <div class="h-full  w-70% bg-light_1 dark:bg-dark_1 wavy">
           <div class="h-full w-50% bg-light_2 dark:bg-dark_2 wavy"></div>
         </div>
       </div>
-      <div class="p-15">
-        <div class="flex items-center">
-          <Nav icons={icons}/>
-          <div class="ml-auto">
-            <ThemeSwitcher/>
-          </div>
+      <div class="ml-28rem">
+        <div class="position-fixed top-15 right-15">
+          <ThemeSwitcher/>
         </div>
-        <div class="w-1/2 h-full">
-          <div class="pt-15">
+        <div class="w-1/2 h-full p-15">
+          <Nav icons={icons}/>
+          <div class="pt-20">
             <slot/>
           </div>
         </div>
