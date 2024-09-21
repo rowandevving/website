@@ -1,0 +1,22 @@
+---
+const { level, icon } = Astro.props;
+---
+<div class="h-20 w-full flex flex-col text-xl rounded-lg font-bold overflow-hidden bg-light_0 dark:bg-dark_0 border-1 border-light_1 dark:border-dark_1">
+  <div class="w-full p-5 text-xl flex items-center text-light_text dark:text-dark_text">
+    <div class=`${icon} mr-2 text-3xl`/>
+    <slot/>
+    <div class="ml-auto font-serif">
+      {level}
+    </div>
+  </div>
+  <div class="flex-1 bg-light_1 dark:bg-dark_1 overflow-hidden">
+    <div class="h-full bg-gradient-to-r from-light_pink dark:from-dark_pink to-light_pink_darker dark:to-dark_pink_darker indicator"/>
+  </div>
+
+</div>
+
+<style define:vars={{ level }}>
+  .indicator {
+    width: var(--level)
+  }
+</style>

@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SkillLevel from '../components/SkillLevel.astro';
 
 const socials = [
   {
@@ -44,4 +45,30 @@ const socials = [
       </li>
     ))}
   </ul>
+  <div class="absolute top-100vh pb-15 w-full">
+    <h2 class="text-4xl font-serif">
+      My Skills
+    </h2>
+    <div class="mt-8 w-full text-light_base grid grid-cols-3 gap-6">
+      <SkillLevel icon="i-simple-icons-go" level="40%" light="#f16529" dark="#f16529">
+        Go
+      </SkillLevel>
+      <SkillLevel icon="i-simple-icons-html5" level="100%" light="#f16529" dark="#f16529">
+        HTML
+      </SkillLevel>
+      <SkillLevel icon="i-simple-icons-javascript" level="93%" light="#f16529" dark="#f16529">
+        JavaScript
+      </SkillLevel>
+      <SkillLevel icon="i-simple-icons-css3" level="95%" light="#f16529" dark="#f16529">
+        CSS
+      </SkillLevel>
+      <SkillLevel icon="i-bxl-java" level="75%" light="#f16529" dark="#f16529">
+        Java
+      </SkillLevel>
+      <SkillLevel icon="i-simple-icons-python" level="87%" light="#f16529" dark="#f16529">
+        Python
+      </SkillLevel>
+    </div>
+  </div>
+  
 </Layout>

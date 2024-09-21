@@ -11,12 +11,13 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.5.9",
-    "@iconify-json/lucide": "^1.2.1",
     "astro": "^4.5.4",
     "astro-robots-txt": "^1.0.0",
     "typescript": "^5.4.2"
   },
   "devDependencies": {
+    "@iconify-json/bxl": "^1.2.0",
+    "@iconify-json/lucide": "^1.2.4",
     "@iconify-json/simple-icons": "^1.1.95",
     "@types/node": "^20.12.6",
     "@unocss/reset": "^0.58.5",

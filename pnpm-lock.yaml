@@ -8,9 +8,6 @@ dependencies:
   '@astrojs/check':
     specifier: ^0.5.9
     version: 0.5.9(typescript@5.4.2)
-  '@iconify-json/lucide':
-    specifier: ^1.2.1
-    version: 1.2.1
   astro:
     specifier: ^4.5.4
     version: 4.5.4(@types/node@20.12.6)(typescript@5.4.2)
@@ -22,6 +19,12 @@ dependencies:
     version: 5.4.2
 
 devDependencies:
+  '@iconify-json/bxl':
+    specifier: ^1.2.0
+    version: 1.2.0
+  '@iconify-json/lucide':
+    specifier: ^1.2.4
+    version: 1.2.4
   '@iconify-json/simple-icons':
     specifier: ^1.1.95
     version: 1.1.95
@@ -662,11 +665,17 @@ packages:
     requiresBuild: true
     optional: true
 
-  /@iconify-json/lucide@1.2.1:
-    resolution: {integrity: sha512-papXuksFsPmrfQTfUKH09N9XX2dsKSp5cdMYolV2hqP/JLL5yzsBGmn1P4eCqB1FwU+oTyh44zFS410yP530fQ==}
+  /@iconify-json/bxl@1.2.0:
+    resolution: {integrity: sha512-qIBKOJClhiHqdHBdlw8SQlrlslP0QbcI2nTQ9UKqAB/60FTfkLyPm+CeRXwg871ypbMTuPMBbLAYMlIL2zLLLQ==}
     dependencies:
       '@iconify/types': 2.0.0
-    dev: false
+    dev: true
+
+  /@iconify-json/lucide@1.2.4:
+    resolution: {integrity: sha512-ji8BuD1LFzLGzueqwmfdx721RGdeeGY4QQsZrKD29/OCO6K5YVI1dzJQzAk4yUGg3dDJBuw1CLb5F0YwirDEbg==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
 
   /@iconify-json/simple-icons@1.1.95:
     resolution: {integrity: sha512-rNrqaG7PVrR0CsawtTb44xXiUhh3REBmYo5WbUMchtZQUMfJfGAszFMnAkFNs2GLVO2H/VTimA98hOtJfKWSig==}
@@ -676,6 +685,7 @@ packages:
 
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
+    dev: true
 
   /@iconify/utils@2.1.22:
     resolution: {integrity: sha512-6UHVzTVXmvO8uS6xFF+L/QTSpTzA/JZxtgU+KYGFyDYMEObZ1bu/b5l+zNJjHy+0leWjHI+C0pXlzGvv3oXZMA==}

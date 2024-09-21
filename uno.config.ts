@@ -29,7 +29,7 @@ export default defineConfig({
       dark_text: "#cad3f5",
       dark_subtext: "#a5adcb",
       dark_pink: "#f5bde6",
-      dark_pink_overlay: "rgb(245, 189, 230, 0.2)",
+      dark_pink_darker: "hsl(316deg, 74%, 75%)",
       light_base: "#eff1f5",
       light_0: "#ccd0da",
       light_1: "#bcc0cc",
@@ -37,7 +37,7 @@ export default defineConfig({
       light_text: "#4c4f69",
       light_subtext: "#6c6f85",
       light_pink: "#ea76cb",
-      light_pink_overlay: "rgb(234, 118, 203, 0.2)",
+      light_pink_darker: "hsl(316deg, 73%, 59%)"
     },
   },
 });
