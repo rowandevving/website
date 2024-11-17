@@ -4,6 +4,8 @@
 </button>
 
 <script defer is:inline>
+  const favicon = document.getElementById("favicon");
+
   const theme = (() => {
     if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
       return localStorage.getItem('theme');
@@ -16,8 +18,10 @@
 
   if (theme === "light") {
     document.documentElement.classList.remove("dark");
+    favicon.href = "/icon.png";
   } else {
     document.documentElement.classList.add("dark");
+    favicon.href = "/icon-dark.png";
   }
 
   window.localStorage.setItem("theme", theme);
@@ -28,6 +32,12 @@
 
     const isDark = element.classList.contains("dark");
     localStorage.setItem("theme", isDark ? "dark" : "light");
+
+    if (isDark) {
+      favicon.href = "/icon-dark.png";
+    } else {
+      favicon.href = "/icon.png";
+    }
   }
 
   document.getElementById("themeSwitcher").addEventListener("click", handleClick);
