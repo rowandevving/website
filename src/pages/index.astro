@@ -37,11 +37,14 @@ const socials = [
     I'm based in the UK and have always been fascinated by how computers work, 
     and how technology can solve real problems that real people face, so I'm always trying to come up with new projects to work on.
   </p>
-  <ul class="mt-8 flex flex-wrap gap-5">
+  <ul class="mt-8 flex flex-wrap gap-3">
     {socials.map((social) => (
-      <li class="group">
-        <a href={social.url} class="flex items-center gap-1.5 b-b-light_0 dark:b-b-dark_0 b-solid b-b-1 text-lg"><div class={`${social.icon}
-        group-hover:text-light_pink dark:group-hover:text-dark_pink transition-color`}/>{social.name}</a>
+      <li>
+        <a href={social.url} aria-label={social.name} class="flex text-xl p-2.5 rounded-full
+         bg-light_0 dark:bg-dark_0 hover:bg-light_pink hover:text-light_base hover:dark:bg-dark_pink hover:dark:text-dark_base 
+          transition-all duration-200">
+          <div class={`${social.icon}`}/>
+        </a>
       </li>
     ))}
   </ul>
