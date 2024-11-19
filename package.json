@@ -10,17 +10,17 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.9",
-    "astro": "^4.5.4",
+    "@astrojs/check": "^0.5.10",
+    "astro": "^4.16.13",
     "astro-robots-txt": "^1.0.0",
-    "typescript": "^5.4.2"
+    "typescript": "^5.6.3"
   },
   "devDependencies": {
-    "@iconify-json/bxl": "^1.2.0",
-    "@iconify-json/lucide": "^1.2.4",
-    "@iconify-json/simple-icons": "^1.1.95",
-    "@types/node": "^20.12.6",
-    "@unocss/reset": "^0.58.5",
-    "unocss": "^0.58.5"
+    "@iconify-json/bxl": "^1.2.1",
+    "@iconify-json/lucide": "^1.2.15",
+    "@iconify-json/simple-icons": "^1.2.12",
+    "@types/node": "^20.17.6",
+    "@unocss/reset": "^0.58.9",
+    "unocss": "^0.58.9"
   }
 }
