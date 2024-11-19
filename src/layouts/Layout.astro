@@ -23,7 +23,7 @@ const icons = {
       </div>
       <div class="ml-20% h-screen">
         <div class="sticky h-20 z-10 top-0 border-b-1 border-light_1 dark:border-dark_1 relative">
-          <div id="overlay" class="w-full z-0 h-full pointer-events-none backdrop-blur-12px absolute top-0 left-0 noise">
+          <div class="w-full z-0 h-full pointer-events-none backdrop-blur-lg absolute top-0 left-0 noise">
           </div>
           <div class="container pl-15 p-5 pr-7 flex justify-between items-center">
             <Nav icons={icons} />
@@ -49,43 +49,5 @@ const icons = {
     .dark {
       color-scheme: dark;
     }
-
-    .noise {
-      --lines: 0.0001px;
-  
-      background: repeating-radial-gradient(
-      circle at center,
-      #eff1f5,
-      var(--lines),
-      #eff1f5,
-      0,
-      #0000,
-      calc(var(--lines) * 3),
-      #0000 0
-      );
-
-      background-size: 60%;
-    }
-
-    .dark .noise {
-      background: repeating-radial-gradient(
-      circle at center,
-      #24273a,
-      var(--lines),
-      #24273a,
-      0,
-      #0000,
-      calc(var(--lines) * 3),
-      #0000 0
-      );
-    }
   </style>
-  <script is:inline>
-
-    const overlay = document.getElementById("overlay")
-    window.addEventListener("scroll", () => {
-      size = Math.floor(Math.random() * (60 - 10) + 10);
-      overlay.style.setProperty("background-size", `${size}%`)
-    });
-  </script>
 </html>
