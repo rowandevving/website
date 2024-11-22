@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SkillLevel from '../components/SkillLevel.astro';
+import { Image } from 'astro:assets';
 
 const socials = [
   {
@@ -24,6 +25,54 @@ const socials = [
     icon: "i-simple-icons-modrinth"
   },
 
+]
+
+const people = [
+  {
+    name: "Catter",
+    url: "https://github.com/catter1",
+    src: "https://avatars.githubusercontent.com/u/63272345"
+  },
+  {
+    name: "Blurryface",
+    url: "https://blurry.gay",
+    src: "https://avatars.githubusercontent.com/u/124838505"
+  },
+  {
+    name: "Naomi",
+    url: "https://naomieow.xyz",
+    src: "https://codeberg.org/avatars/62cbdd8dccd084d4ceeda0f2e59540fd534c2daaa87458c70dab3cf8a7ac9600?size=512"
+  },
+  {
+    name: "WorldWidePixel",
+    url: "https://worldwidepixel.ca",
+    src: "https://avatars.githubusercontent.com/u/58098422"
+  },
+  {
+    name: "Sarc",
+    url: "https://linktr.ee/sarcasmtree",
+    src: "https://ugc.production.linktr.ee/0198808b-ddf5-4d2e-9c9d-fa7a8c998762_Untitled104-20240523100812.png?io=true&size=avatar-v1_0"
+  },
+  {
+    name: "Devin",
+    url: "https://intergrav.xyz",
+    src: "https://avatars.githubusercontent.com/u/42325132"
+  },
+  {
+    name: "Tera",
+    url: "https://modrinth.com/user/TeraBuildsStuff",
+    src: "https://avatars.githubusercontent.com/u/58230701"
+  },
+  {
+    name: "Splatus",
+    url: "https://modrinth.com/user/limesplatus",
+    src: "https://cdn.modrinth.com/user/6gUWVwiH/3fe0c6b15dce11cc51850252a3791b01a892c25a.png"
+  },
+  {
+    name: "CallMeEcho",
+    url: "https://callmeecho.dev",
+    src: "https://callmeecho.dev/_astro/pfp.WWYdYdRO_Wmqlk.webp"
+  }
 ]
 ---
 
@@ -74,6 +123,18 @@ const socials = [
       <SkillLevel icon="i-simple-icons-python" level="90%">
         Python
       </SkillLevel>
+    </div>
+    <h2 class="text-4xl font-serif mt-20">
+      Cool people
+    </h2>
+    <div class="mt-6 flex flex-wrap gap-3">
+      {people.map((person) => (
+        <a href={person.url}>
+          <div class="rounded-full h-20 w-20 ring-1.5 ring-light_1 dark:ring-dark_1 overflow-hidden">
+            <Image src={person.src} alt={person.name} width="80" height="80"/>
+          </div>
+        </a>
+      ))}
     </div>
   </div>
   
