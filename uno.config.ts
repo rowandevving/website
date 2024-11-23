@@ -2,6 +2,7 @@ import { defineConfig } from "unocss";
 import { presetUno } from "unocss";
 import { presetWebFonts } from "unocss";
 import { presetIcons } from 'unocss'
+import presetAnimations from "unocss-preset-animations";
 
 export default defineConfig({
   presets: [
@@ -19,7 +20,10 @@ export default defineConfig({
       },
     }),
     presetIcons(),
+    presetAnimations({ fillMode: "both" }),
   ],
+  //unocss doesn't support generating a safelist from regex, so this will have to do :P
+  safelist: Array.from({ length: 50 }, (_, i) => `animate-delay-${2000 + i * 100}`),
   theme: {
     colors: {
       dark_base: "#24273a",

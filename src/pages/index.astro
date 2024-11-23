@@ -77,21 +77,21 @@ const people = [
 ---
 
 <Layout title="Home">
-  <h1 class="text-5xl font-serif">Hi, I'm rowan.</h1>
-  <p class="text-lg mt-8 mb-2 line-height-snug">
+  <h1 class="text-5xl font-serif animate-in slide-in-l-5 fade-in-0 animate-duration-2000">Hi, I'm rowan.</h1>
+  <p class="text-lg mt-8 mb-2 line-height-snug animate-in slide-in-l-5 fade-in-0 animate-duration-2000 animate-delay-500">
     I'm an aspiring full-stack developer interested in <strong>web design, education technology</strong> and <strong>robotics.</strong>
     I may also poke around with <strong>minecraft modding</strong> from time to time as well.
   </p>
-  <p class="text-lg line-height-snug">
+  <p class="text-lg line-height-snug animate-in slide-in-l-5 fade-in-0 animate-duration-2000 animate-delay-1000">
     I'm based in the UK and have always been fascinated by how computers work, 
     and how technology can solve real problems that real people face, so I'm always trying to come up with new projects to work on.
   </p>
   <ul class="mt-8 flex flex-wrap gap-3">
-    {socials.map((social) => (
+    {socials.map((social, index) => (
       <li>
-        <a href={social.url} aria-label={social.name} class="flex text-xl p-2.5 rounded-full
+        <a href={social.url} aria-label={social.name} class={`flex text-xl p-2.5 rounded-full
          bg-light_0 dark:bg-dark_0 hover:bg-light_pink hover:text-light_base hover:dark:bg-dark_pink hover:dark:text-dark_base 
-          transition-all duration-200">
+          transition-all duration-200 animate-in fade-in-0 slide-in-r-5 animate-duration-1000 animate-delay-${2000 + (index * 100)}`}>
           <div class={`${social.icon}`}/>
         </a>
       </li>
